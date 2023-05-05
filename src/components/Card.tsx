@@ -1,10 +1,10 @@
 import CardDetails from "./CardDetails"
 
-const Card = () => {
+const Card = (props: any) => {
     return (
-        <div className="flex justify-center items-center gap-7 w-[48rem] p-8">
-            <img className="w-36 h-44 rounded-md " alt="cardimage" src="https://source.unsplash.com/WLxQvbMyfas" />
-            <CardDetails />
+        <div className="flex justify-center items-center gap-7 w-[48rem] p-6">
+            <img className="w-40 h-48 rounded-md " alt="cardimage" src={props.img} />
+            <CardDetails {...props} />
         </div>
     )
 }
